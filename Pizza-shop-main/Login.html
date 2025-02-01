@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css" />
+</head>
+
+<body>
+    <div class="main container-fluid overflow-hidden">
+        <div class="row w-10 submain">
+            <div
+                class="pizza-back col-lg-6 col-md-12 col-sm-12 col-12 p-0 d-flex justify-content-center align-items-center">
+                <img src="pizzashop_images/images/dominos_background.jpg" class="pizza" alt="">
+            </div>
+            <div
+                class="lg-form col-lg-6 col-md-12 col-sm-12 col-12 d-flex justify-content-center flex-column align-items-center">
+                <!-- <form class="row g-3 needs-validation" novalidate>
+                    <div class="col-8">
+                        <label for="validationCustom01" class="form-label">First name</label>
+                        <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                        <div class="col-sm-10">
+                          <input type="password" class="form-control" id="inputPassword">
+                        </div>
+                      </div>
+                </form> -->
+                <div class="wrapper">
+                    <div class="form-wrapper align-content-center">
+                        <div class="head d-flex justify-content-center">
+                            <img src="pizzashop_images/images/logos/pizzashop_logo.png" alt=""
+                                style="width: 60px; height: 50px;">
+                            <h2 class="title">PIZZASHOP</h2>
+                        </div>
+                        <h4>Welcome,</h4>
+                        <form id="form" class="form">
+                            <div class="form-group">
+                                <!-- <input id="email" type="email" placeholder="Email*" required>
+                                <p id="emailError"></p> -->
+                                <div class="position-relative">
+                                    <input id="email" type="email" placeholder="Email*" required>
+                                    <img src="pizzashop_images/images/icons/user.png" class="position-absolute" style="height: 25px; width: 25px; right: 16px; margin-top: 10px;" alt="">
+                                    <p id="emailError"></p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <!-- <input id="password" type="password" placeholder="Password" required> -->
+                                <input type="password" class="" id="password" placeholder="Password*" style="height: 48px;" required>
+                                <p id="passwordError"></p>
+                            </div>
+                            <div class="remember mb-3">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input checks" type="checkbox" id="inlineCheckbox1"
+                                        value="option1" style="width: 0px !important; padding: 9px;">    
+                                    <label class="form-check-label fw-normal" for="inlineCheckbox1">Remember Me</label>
+                                </div>
+
+                                <a class="forgot-pass" href="forgot.html">Forgot Password</a>
+                            </div>
+                            <input type="submit" value="Login" class="w-100">
+                        </form>
+                    </div>
+                    <div class="success-msg-container">
+                        <h2 id="msg" class="msg">You have provided the correct details and your form will be processed
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/Loginpage.js"></script>
+</body>
+
+</html>

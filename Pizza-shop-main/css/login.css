@@ -1,0 +1,192 @@
+.pizza-back{
+    width: 100%;
+}
+
+.pizza{
+    width: 50vw;
+    height: 100%;
+    object-fit: cover;
+}
+
+.login-info{
+    width: 100%;
+}
+
+.row{
+    height: 100vh;
+    /* width: 100%; */
+}
+
+.lg-form{
+    height: 100vh;
+    background-color: #216f9b45;
+}
+
+.head h2{
+    color: rgb(41, 101, 233);
+    font-weight: 600;
+}
+
+.forgot-pass{
+    float: right;
+    text-decoration: none;
+}
+
+@media only screen and (max-width:990px) {
+    .pizza{
+        width: 100%;
+    }
+
+    .form-wrapper{
+        height: 100%
+    }
+
+}
+
+@media only screen and (max-width:990px) {
+    .forgot-pass{
+        display: block;
+        float: left;
+        margin-bottom: 12px;
+    }
+
+    
+
+    .remember{
+        margin-left: 22%;
+    }
+    .pizza{
+        display: none;
+        
+    }
+    .submain{
+        background-image: url("../pizzashop_images/images/dominos_background.jpg");
+        /* background : transparent; */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        color: white;
+    }
+    
+    .form-wrapper{
+      padding: 20px !important;
+    }
+
+    .wrapper{
+      background: transparent;
+    }
+
+    .lg-form{
+      background: transparent;
+    }
+
+    .remember{
+      margin: 0;
+    }
+
+    .form-check{
+      float:left;
+    }
+    
+    .forgot-pass{
+      float: right;
+    }
+}
+
+/* ---------------------- */
+/* validation */
+/* ------------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Slab", serif;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-wrapper {
+  width: 100%;
+  max-width: 660px;
+  padding: 50px;
+}
+
+.title {
+  margin-bottom: 50px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2em;
+  color: black;
+}
+
+.form-group {
+  margin: 20px 0;
+}
+
+input {
+  font-size: 30px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin: 5px 0;
+  box-sizing: border-box;
+  height: 48px;
+}
+
+.container-fluid{
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* 
+#email{
+  background: url(pizzashop_images/images/icon/user.png) no-repeat scroll 7px 7px;
+} */
+
+label {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+input:not([type="submit"]) {
+  width: 100%;
+}
+
+input[type="submit"] {
+  background-color: rgb(8, 81, 236);
+  color: white;
+  font-size: 20px;
+}
+input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: rgb(60, 113, 212);
+}
+
+input[type="submit"]:active {
+  background-color: rgb(8, 81, 236);
+}
+
+.error #emailError,
+.error #passwordError {
+  color: red;
+}
+.error input {
+  /* border: 2px solid red; */
+}
+
+.msg {
+  display: none;
+}

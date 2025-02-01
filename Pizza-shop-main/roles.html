@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roles</title>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <style>
+      .box{
+        background-color: white;
+      }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0066a7;">
+        <div class="container-fluid">
+            <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
+                aria-controls="sidebar">
+                <img src="pizzashop_images/images/icons8-menu-64.png" alt="" style="height: 30px;">
+            </button>
+            <a class="navbar-brand ms-3" href="#"><img src="pizzashop_images/images/Default_pfp.svg.png" alt=""
+                    style="width: 40px; height: 40px;"></a>
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-start bg-light" style="width: 233px;" tabindex="-1" id="sidebar">
+        <div class="offcanvas-header">
+            <img src="pizzashop_images/images/logos/pizzashop_logo.png" alt="" style="width: 50px; height: 40px;">
+            <h5 class="offcanvas-title">PIZZASHOP</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="nav flex-column">
+                <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#">Users</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Role and Permission</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Table and Section</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Taxes and Fees</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Orders</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Customers</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="" id="main-content">
+        <div class="box mt-5 w-75" style="box-shadow: 0 0 0 white;">
+            <div class="" id="main-content" style="margin: 0;">
+                <table class="table">
+                    <tbody>
+                      <tr>
+                        <td class="fw-bold" colspan="3" style="border-top: none;">Role</td>
+                        <td style="float: right;"class="fw-bold">Action</td>
+                      </tr>
+                      <tr>
+                        <td colspan="3">Admin</td>
+                        <td class="d-flex justify-content-end"><img src="pizzashop_images/images/pencil-fill.svg" alt="" style="border-bottom: none; "></td>
+                      </tr>
+                      <tr>
+                        <td colspan="3">Account Manager</td>
+                        <td class="d-flex justify-content-end"><img src="pizzashop_images/images/pencil-fill.svg" alt="" style="border-bottom: none;"></td>
+                      </tr>
+                      <tr>
+                        <td colspan="3">Chef</td>
+                        <td class="d-flex justify-content-end"><img src="pizzashop_images/images/pencil-fill.svg" alt="" style="border-bottom: none;"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+            </div>
+        </div>
+        <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/dashboard.js"></script>
+</body>
+
+</html>

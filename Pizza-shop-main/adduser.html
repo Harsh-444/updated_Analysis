@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add-New-User</title>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0066a7;">
+        <div class="container-fluid">
+            <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
+                aria-controls="sidebar">
+                <img src="pizzashop_images/images/icons8-menu-64.png" alt="" style="height: 30px;">
+            </button>
+            <a class="navbar-brand ms-3" href="#"><img src="pizzashop_images/images/Default_pfp.svg.png" alt=""
+                    style="width: 40px; height: 40px;"></a>
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-start bg-light" style="width: 233px;" tabindex="-1" id="sidebar">
+        <div class="offcanvas-header">
+            <img src="pizzashop_images/images/logos/pizzashop_logo.png" alt="" style="width: 50px; height: 40px;">
+            <h5 class="offcanvas-title">PIZZASHOP</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="nav flex-column">
+                <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#">Users</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Role and Permission</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Table and Section</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Taxes and Fees</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Orders</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Customers</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="" id="main-content">
+        <div class="container-fluid d-flex align-items-center head-top" style="justify-content: space-between;">
+            <p class="headings fw-bold" style="padding-left: 39px; font-size: 30px;">Add New Users</p>
+            <div class="srch" style="margin-right: 39px;">
+                <input type="text" class="search-user" name="" id="" placeholder="Search">
+                <button value="" class="add-btn">Back</button>
+            </div>
+        </div>
+        <div class="box">
+            <div class="" id="main-content" style="margin: 0;">
+                <div class="text-center">
+                    <div class="row row-cols-2">
+                        <div class="col-lg-6 col-12">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInput"
+                                    placeholder="name@example.com">
+                                <label for="floatingInput">First Name</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInput"
+                                    placeholder="name@example.com">
+                                <label for="floatingInput">Last Name</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="floatingInput"
+                                    placeholder="name@example.com">
+                                <label for="floatingInput">User Name</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12 form-floating mb-3">
+                            <select class="form-select" aria-label="Default select example" style="height: 58px;">
+                                <option selected>select role</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                            <label for="Role" style="padding-left: 24px;">Role</label>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="floatingInput"
+                                    placeholder="name@example.com">
+                                <label for="floatingInput">Email</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control" id="floatingInput"
+                                    placeholder="name@example.com">
+                                <label for="floatingInput">Password</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="upl mb-4">
+                        <div class="browse position-relative">
+                            <input class="file-upload" type="file">
+                        </div>
+                        <div class="browse-content">
+                            <span>browse File</span>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="row">
+                            <div class="col-lg-4 col-12 form-floating mb-3">
+                                <select class="form-select" aria-label="Default select example" style="height: 58px;">
+                                    <option selected>select Country</option>
+                                    <option value="1">India</option>
+                                    <option value="2">USA</option>
+                                    <option value="3">UK</option>
+                                </select>
+                                <label for="Role" style="padding-left: 24px;">Country</label>
+                            </div>
+                            <div class="col-lg-4 col-12 form-floating mb-3">
+                                <select class="form-select" aria-label="Default select example" style="height: 58px;">
+                                    <option selected>select State</option>
+                                    <option value="1">Gujarat</option>
+                                    <option value="2">Maharastra</option>
+                                    <option value="3">Rajsthan</option>
+                                </select>
+                                <label for="Role" style="padding-left: 24px;">State</label>
+                            </div>
+                            <div class="col-lg-4 col-12 form-floating mb-3">
+                                <select class="form-select" aria-label="Default select example" style="height: 58px;">
+                                    <option selected>select City</option>
+                                    <option value="1">Ahmedabad</option>
+                                    <option value="2">Gandhinagar</option>
+                                    <option value="3">Surat</option>
+                                </select>
+                                <label for="Role" style="padding-left: 24px;">City</label>
+                            </div>
+                            <div class="col-lg-4 col-12 form-floating">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="floatingInput"
+                                        placeholder="Zipcode">
+                                    <label for="floatingInput">Zipcode</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-12 form-floating">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="floatingInput"
+                                        placeholder="Address">
+                                    <label for="floatingInput">Address</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-12 form-floating">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="floatingInput"
+                                        placeholder="Phone">
+                                    <label for="floatingInput">Phone</label>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="buttons">
+                    <button class="btn" style="color: white;">Create User</button>
+                    <button class="btn" style="background: transparent !important; border: 1px solid #0066a7; color: #0066a7;">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>

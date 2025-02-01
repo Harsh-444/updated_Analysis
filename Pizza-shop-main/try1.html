@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .form-control:focus {
+            color: #212529;
+            background-color: #fff;
+            border: 0.5px solid rgb(110, 87, 87);
+            outline: 0;
+            box-shadow: 0 0 0 white !important;
+        }
+
+        .form-switch .form-check-input {
+            width: 2.5em;
+            height: 1.5em;
+            background-position: left center;
+            border-radius: 2em;
+            transition: background-position .15s ease-in-out;
+        }
+
+        @media (max-width: 768px) {
+            #myTab {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0066a7;">
+        <div class="container-fluid">
+            <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
+                aria-controls="sidebar">
+                <img src="pizzashop_images/images/icons8-menu-64.png" alt="" style="height: 30px;">
+            </button>
+            <a class="navbar-brand ms-3" href="#"><img src="pizzashop_images/images/Default_pfp.svg.png" alt=""
+                    style="width: 40px; height: 40px;"></a>
+        </div>
+    </nav>
+
+    <button class="btn btn-primary d-lg-none" onclick="toggleTabs()">Toggle Tabs</button>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+                type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                type="button" role="tab" aria-controls="profile" aria-selected="false">Modifiers</button>
+        </li>
+    </ul>
+    
+    <div class="tab-content w-100" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th class="text-center">Item Type</th>
+                            <th class="text-center">Rate</th>
+                            <th class="text-center">Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Punjabi Tadka Sandwich</td>
+                            <td class="text-center"><img src="pizzashop_images/images/icons/non-veg-icon.svg" style="width: 25px;"></td>
+                            <td class="text-center">200</td>
+                            <td class="text-center">1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleTabs() {
+            var tabElement = document.getElementById("myTab");
+            if (tabElement.style.display === "none" || tabElement.style.display === "") {
+                tabElement.style.display = "block";
+            } else {
+                tabElement.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

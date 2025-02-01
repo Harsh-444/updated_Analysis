@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagination Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 3rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 10px;
+        }
+
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        .pagination {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .pagination a {
+            color: #007BFF;
+            padding: 8px 16px;
+            text-decoration: none;
+            border: 1px solid #007BFF;
+            margin: 0 5px;
+            border-radius: 4px;
+        }
+
+        .pagination a:hover {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        .pagination .active {
+            background-color: #007BFF;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="data-container">
+        <h1>Pagination in HTML, CSS & JavaScript</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Role</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+            </tbody>
+        </table>
+    </div>
+
+    <div class="pagination" id="pagination">
+        <a href="#" id="prev">Previous</a>
+        <a href="#" id="next">Next</a>
+        <p id="page-numbers"></p>
+    </div>
+
+    <script>
+        const data = [
+            { name: "Alice", email: "mailto:alice@example.com", phone: "1234567890", role: "Admin", status: "Active", action: "Edit" },
+            { name: "Bob", email: "mailto:bob@example.com", phone: "0987654321", role: "User", status: "Inactive", action: "Edit" },
+            { name: "Charlie", email: "mailto:charlie@example.com", phone: "1122334455", role: "Admin", status: "Active", action: "Edit" },
+            { name: "David", email: "mailto:david@example.com", phone: "2233445566", role: "User", status: "Inactive", action: "Edit" },
+            { name: "Eve", email: "mailto:eve@example.com", phone: "3344556677", role: "User", status: "Active", action: "Edit" },
+            { name: "Frank", email: "mailto:frank@example.com", phone: "4455667788", role: "User", status: "Inactive", action: "Edit" },
+            { name: "Grace", email: "mailto:grace@example.com", phone: "5566778899", role: "Admin", status: "Active", action: "Edit" },
+            { name: "Hank", email: "mailto:hank@example.com", phone: "6677889900", role: "User", status: "Inactive", action: "Edit" }
+        ];
+
+        const rowsPerPage = 5;
+        let currentPage = 1;
+
+        const tableBody = document.getElementById('table-body');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+        const pageNumbers = document.getElementById('page-numbers');
+
+        function displayPage(page) {
+            tableBody.innerHTML = '';
+            const startIndex = (page - 1) * rowsPerPage;
+            const endIndex = startIndex + rowsPerPage;
+
+            const rows = data.slice(startIndex, endIndex);
+            rows.forEach(item => {
+                const row = `
+                    <tr>
+                        <td>${item.name}</td>
+                        <td>${item.email}</td>
+                        <td>${item.phone}</td>
+                        <td>${item.role}</td>
+                        <td>${item.status}</td>
+                        <td>${item.action}</td>
+                    </tr>
+                `;
+                tableBody.innerHTML += row;
+            });
+
+            updatePagination();
+        }
+
+        function updatePagination() {
+            const totalPages = Math.ceil(data.length / rowsPerPage);
+            pageNumbers.textContent = `Page ${currentPage} of ${totalPages}`;
+            prevButton.disabled = currentPage === 1;
+            nextButton.disabled = currentPage === totalPages;
+        }
+
+        prevButton.addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage--;
+                displayPage(currentPage);
+            }
+        });
+
+        nextButton.addEventListener('click', () => {
+            const totalPages = Math.ceil(data.length / rowsPerPage);
+            if (currentPage < totalPages) {
+                currentPage++;
+                displayPage(currentPage);
+            }
+        });
+        displayPage(currentPage);
+    </script>
+</body>
+</html>
