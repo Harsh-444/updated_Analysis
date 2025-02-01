@@ -2,228 +2,252 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Permissions</title>
-    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/dashboard.css">
-    <style>
-        .form-floating>.form-control:focus~label, .form-floating>.form-control:not(:placeholder-shown)~label, .form-floating>.form-select~label {
-            opacity: .65;
-            transform: scale(.85) translateY(-1.8rem) translateX(.15rem);
-            background-color: white;
-        }
-        .form-floating>.form-control:focus, .form-floating>.form-control:not(:placeholder-shown) {
-            padding-top: 0;
-            padding-bottom: 0;
-         }
-         .form-control:focus {
-                color: #212529;
-                background-color: #fff;
-                border: 0.5px solid rgb(110, 87, 87);
-                outline: 0;
-                box-shadow: 0 0 0 white !important;
-            }
-            .form-switch .form-check-input {
-                width: 2.5em;
-                /* margin-left: -2.5em; */
-                height: 1.5em;
-                background-position: left center;
-                border-radius: 2em;
-                transition: background-position .15s ease-in-out;
-            }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Permissions</title>
+  <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <style>
+    .form-floating>.form-control:focus~label,
+    .form-floating>.form-control:not(:placeholder-shown)~label,
+    .form-floating>.form-select~label {
+      opacity: .65;
+      transform: scale(.85) translateY(-1.8rem) translateX(.15rem);
+      background-color: white;
+    }
+
+    .form-floating>.form-control:focus,
+    .form-floating>.form-control:not(:placeholder-shown) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .form-control:focus {
+      color: #212529;
+      background-color: #fff;
+      border: 0.5px solid rgb(110, 87, 87);
+      outline: 0;
+      box-shadow: 0 0 0 white !important;
+    }
+
+    .form-switch .form-check-input {
+      width: 2.5em;
+      /* margin-left: -2.5em; */
+      height: 1.5em;
+      background-position: left center;
+      border-radius: 2em;
+      transition: background-position .15s ease-in-out;
+    }
+  </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0066a7;">
-        <div class="container-fluid">
-            <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
-                aria-controls="sidebar">
-                <img src="pizzashop_images/images/icons8-menu-64.png" alt="" style="height: 30px;">
-            </button>
-            <a class="navbar-brand ms-3" href="#"><img src="pizzashop_images/images/Default_pfp.svg.png" alt=""
-                    style="width: 40px; height: 40px;"></a>
-        </div>
-    </nav>
-
-    <div class="offcanvas offcanvas-start bg-light" style="width: 233px;" tabindex="-1" id="sidebar">
-        <div class="offcanvas-header">
-            <img src="pizzashop_images/images/logos/pizzashop_logo.png" alt="" style="width: 50px; height: 40px;">
-            <h5 class="offcanvas-title">PIZZASHOP</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            <ul class="nav flex-column">
-                <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
-                <li class="nav-item"><a class="nav-link active" href="#">Users</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Role and Permission</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Table and Section</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Taxes and Fees</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Orders</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Customers</a></li>
-            </ul>
-        </div>
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0066a7;">
+    <div class="container-fluid">
+      <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
+        aria-controls="sidebar">
+        <img src="pizzashop_images/images/icons8-menu-64.png" alt="" style="height: 30px;">
+      </button>
+      <a class="navbar-brand ms-3" href="#"><img src="pizzashop_images/images/Default_pfp.svg.png" alt=""
+          style="width: 40px; height: 40px;"></a>
     </div>
+  </nav>
 
-    <div class="" id="main-content">
-        <div class="container-fluid d-flex align-items-center head-top" style="justify-content: space-between;">
-            <p class="headings fw-bold" style=" font-size: 30px;">Permissions</p>
-            <div class="srch">
-                <button value="" class="add-btn">Back</button>
-            </div>
+  <div class="offcanvas offcanvas-start bg-light" style="width: 233px;" tabindex="-1" id="sidebar">
+    <div class="offcanvas-header">
+      <img src="pizzashop_images/images/logos/pizzashop_logo.png" alt="" style="width: 50px; height: 40px;">
+      <h5 class="offcanvas-title">PIZZASHOP</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="nav flex-column">
+        <li class="nav-item"><a class="nav-link" href="#"><img class="pe-2"
+              src="pizzashop_images/images/images-icon/border-all.svg" alt="">Dashboard</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#"><img class="pe-2"
+              src="pizzashop_images/images/images-icon/people.svg" alt="">Users</a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><img class="pe-2"
+              src="pizzashop_images/images/images-icon/person-add.svg" alt="">Role and Permission</a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><img class="pe-2"
+              src="pizzashop_images/images/images-icon/icons8-service-bell-50.png" style="height: 20px;" alt="">Menu</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#"><img class="pe-2"
+              src="pizzashop_images/images/images-icon/table.svg" alt="">Table and Section</a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><img class="pe-2"
+              src="pizzashop_images/images/images-icon/cash-coin.svg" alt="">Taxes and Fees</a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><img class="pe-2"
+              src="pizzashop_images/images/images-icon/clipboard2-check.svg" alt="">Orders</a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><img class="pe-2"
+              src="pizzashop_images/images/images-icon/person-rolodex.svg" alt="">Customers</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="" id="main-content">
+    <div class="container-fluid d-flex align-items-center head-top" style="justify-content: space-between;">
+      <p class="headings fw-bold" style=" font-size: 30px;">Permissions</p>
+      <div class="srch">
+        <button value="" class="add-btn" style="background-color: transparent; border:1px solid #0066a7; color: #0066a7;">Back</button>
+      </div>
+    </div>
+    <div class="box">
+      <div class="" id="main-content" style="margin: 0;">
+        <div>
+          <div class="form-floating mb-3 w-25 mt-4">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Role">
+            <label for="floatingInput">Role</label>
+          </div>
         </div>
-        <div class="box">
-            <div class="" id="main-content" style="margin: 0;">
-                <div>
-                    <div class="form-floating mb-3 w-25">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="Role">
-                        <label for="floatingInput">Role</label>
-                    </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col" style="width: 40px;"><input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+              </th>
+              <th scope="col">Permission</th>
+              <th scope="col">Can View</th>
+              <th scope="col">Can Add/Edit</th>
+              <th scope="col"> Can Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></th>
+              <td>Users</td>
+              <td>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
                 </div>
-                <table class="table">
-                    <thead>
-                      <tr>
-                        <th scope="col" style="width: 40px;"><img src="pizzashop_images/images/icons/icons8-indeterminate-checkbox-32.png" alt="" style="height: 25px;"></th>
-                        <th scope="col">Permission</th>
-                        <th scope="col">Can View</th>
-                        <th scope="col">Can Add/Edit</th>
-                        <th scope="col"> Can Delete</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></th>
-                        <td>Users</td>
-                        <td>
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                              </div>
-                        </td>
-                        <td><div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                          </div></td>
-                          <td><div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                          </div></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></th>
-                        <td>RoleAndPermission</td>
-                        <td><div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" disabled>
-                          </div></td>
-                        <td>
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" disabled>
-                              </div>
-                        </td>
-                        <td>
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" disabled>
-                              </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></th>
-                        <td >Menu</td>
-                        <td>
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                              </div>
-                        </td>
-                        <td>
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                              </div>
-                        </td>
-                        <td>
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                              </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></th>
-                        <td>TableAndSection</td>
-                        <td><div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                          </div></td>
-                          <td>
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                              </div>
-                        </td>
-                        <td>
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                              </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></th>
-                        <td>TaxAndFee</td>
-                        <td>
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                              </div>
-                        </td>
-                        <td>
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                              </div>
-                        </td>
-                        <td>
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                              </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></th>
-                        <td>Other</td>
-                        <td>
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                              </div>
-                        </td>
-                        <td>
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                              </div>
-                        </td>
-                        <td>
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                              </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></th>
-                        <td>Customer</td>
-                        <td>
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                              </div>
-                        </td>
-                        <td>
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                              </div>
-                        </td>
-                        <td>
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                              </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-            </div>
-        </div>
-        <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
-        <script src="js/dashboard.js"></script>
+              </td>
+              <td>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                </div>
+              </td>
+              <td>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></th>
+              <td>RoleAndPermission</td>
+              <td>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" disabled>
+                </div>
+              </td>
+              <td>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" disabled>
+                </div>
+              </td>
+              <td>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" disabled>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></th>
+              <td>Menu</td>
+              <td>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                </div>
+              </td>
+              <td>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                </div>
+              </td>
+              <td>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></th>
+              <td>TableAndSection</td>
+              <td>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                </div>
+              </td>
+              <td>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                </div>
+              </td>
+              <td>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></th>
+              <td>TaxAndFee</td>
+              <td>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                </div>
+              </td>
+              <td>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                </div>
+              </td>
+              <td>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></th>
+              <td>Other</td>
+              <td>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                </div>
+              </td>
+              <td>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                </div>
+              </td>
+              <td>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></th>
+              <td>Customer</td>
+              <td>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                </div>
+              </td>
+              <td>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                </div>
+              </td>
+              <td>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/dashboard.js"></script>
 </body>
 
 </html>
