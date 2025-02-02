@@ -68,3 +68,12 @@ password.addEventListener("focusout", (e)=>{
         password.parentElement.classList.add("error");
     }
 });
+
+const togglePassword = document.querySelector('#togglePassword');
+  const password1 = document.querySelector('#password');
+
+  togglePassword.addEventListener('click', function (e) {
+    const type = password1.getAttribute('type') === 'password' ? 'text' : 'password';
+    password1.setAttribute('type', type);
+    this.classList.toggle('fa-eye-slash');
+});
