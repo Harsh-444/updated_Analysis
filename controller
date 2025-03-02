@@ -1,0 +1,97 @@
+public async Task<(List<UsersViewModel> users, int totalUsers, int totalPages)> GetPaginatedUsersAsync(
+
+    string searchTerm, int page, int itemsPerPage, string sortColumn = "Name", string sortOrder = "asc")
+
+{
+
+    var usersQuery = _db.Usertables.Where(u => u.Isdeleted == false).AsQueryable();
+
+
+
+    if (!string.IsNullOrEmpty(searchTerm))
+
+    {
+
+        usersQuery = usersQuery.Where(u => u.Username.Contains(searchTerm));
+
+    }
+
+
+
+    var totalUsers = await usersQuery.CountAsync();
+
+
+
+    // Sorting logic
+
+    usersQuery = sortColumn.ToLower() switch
+
+    {
+
+        "name" => (sortOrder == "asc") ? usersQuery.OrderBy(u => u.Username) : usersQuery.OrderByDescending(u => u.Username),
+
+        "role" => (sortOrder == "asc") ? usersQuery.OrderBy(u => u.Roleid) : usersQuery.OrderByDescending(u => u.Roleid),
+
+        _ => usersQuery.OrderBy(u => u.Username) // Default sorting
+
+    };
+
+
+
+    var userPagination = await usersQuery
+
+        .Skip((page - 1) * itemsPerPage)
+
+        .Take(itemsPerPage)
+
+        .Join(_db.Roles, u => u.Roleid, r => r.Roleid, (u, r) => new UsersViewModel
+
+        {
+
+            Name = u.Username,
+
+            Email = u.Email,
+
+            Phone = u.Phone,
+
+            Roleid = r.Roleid,
+
+            RoleName = r.Rolename,
+
+            Status = u.Status,
+
+            Images = u.Images
+
+        })
+
+        .ToListAsync();
+
+
+
+    var totalPages = (int)Math.Ceiling((double)totalUsers / itemsPerPage);
+
+    return (userPagination, totalUsers, totalPages);
+
+}
+
+------------------------------------------------------
+
+public async Task<IActionResult> Userlist(
+    string searchTerm = "", 
+    int page = 1, 
+    int itemsPerPage = 5, 
+    string sortColumn = "Name", 
+    string sortOrder = "asc")
+{
+    var (users, totalUsers, totalPages) = await _userRepository.GetPaginatedUsersAsync(searchTerm, page, itemsPerPage, sortColumn, sortOrder);
+
+    ViewData["SearchTerm"] = searchTerm;
+    ViewBag.page = page;
+    ViewData["TotalPages"] = totalPages;
+    ViewBag.itemsPerPage = itemsPerPage;
+    ViewBag.totalUsers = totalUsers;
+    ViewBag.SortColumn = sortColumn;
+    ViewBag.SortOrder = sortOrder;
+
+    return View(users);
+}
